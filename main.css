@@ -1,0 +1,137 @@
+*{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 50px;
+}
+form{
+   text-align: center;
+   margin-bottom: 50px;
+   
+}
+
+label{
+    font-size: 18pt;
+}
+
+input{
+    font-size: 14pt;
+}
+
+.gameInput{
+    width: 250px;
+    padding-left: 5px;
+}
+
+.numberInput{
+    width: 45px;
+}
+
+.numLabel{
+    margin-left: 10px;
+}
+
+button{
+    font-size: 15pt;
+    margin-left: 12px;
+}
+
+img{
+    height: 200px;
+    width: 300px;
+    float: left;
+    margin-bottom: 100px;
+    margin-right: 30px;
+}
+
+li{
+    list-style: none;
+    
+}
+
+div{
+    clear: left;
+}
+
+.gameName{
+    padding-top: 35px;
+}
+
+.moreInfo{
+    margin-left: 0px;
+    font-size: 12pt;
+  }
+
+  h1{
+    clear: left;
+  }
+  
+  .gameInfo li{
+    display: inline;
+  }
+  
+  li{
+    padding-right: 10px;
+  }
+
+  .infoPic{
+      height: 400px;
+      width: 500px;
+  }
+
+  .description{
+      padding-top: 35px;
+      padding-right: 20px;
+  }
+
+  hr{
+      margin-right: 20px;
+  }
+
+  .gameMoreInfo{
+      border: 2px solid black;
+      height: 404px;
+      width: 1600px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .gameVid{
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      justify-content: center;
+  }
+  
+  .moreLikeGames{
+      padding-top: 40px;
+  }
+
+  .link{
+      padding-right: 35px;
+      display: inline;
+  }
+
+  .storeList{
+      font-size: 24pt;
+      padding-right: 20px;
+      
+  }
+
+  .storeLinks{
+    text-align: center;
+    border: 2px solid rgb(8, 57, 90);
+    margin-bottom: 50px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>What to Play Next?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An app that helps you determine what video game to play next">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="script.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+    
+    <body>
+        <h1>What to Play Next?</h1>
+        <form id="gameSearch">
+            <label class="gameLabel">Game you just finished: </label>
+            <input type="text" placeholder="e.g. Call of Duty" required class="gameInput">
+            <label class="numLabel">Number of new suggestions: </label>
+            <input type="number" class="numberInput" value="1" required max="25" class="resultNum">
+            <button type="submit" class="searchButton">Search</button>
+        </form>
+
+        <main role="main">
+            <div class="results"></div>
+        </main>
+
+
+    </body>
+
+</html>
