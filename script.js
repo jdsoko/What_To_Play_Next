@@ -144,7 +144,7 @@ src=${input2}>
 </iframe>
 <br>
 <form class="moreLikeGames">
-<label class="likeGameLabel">Want to Find More Games like this One?</label>
+<label class="likeGameLabel">Get More Games like this One:</label>
 <br>
 <input class="moreGameNum" type="number" value="5" max="25" id="numberInput" required min="1" >
 <button class="moreGameButton" id="${input1.slug}">More Games</button>
