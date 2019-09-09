@@ -9,22 +9,31 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="script.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:600|Press+Start+2P&display=swap" rel="stylesheet">
 </head>
     
     <body>
-        <h1>What to Play Next?</h1>
-        <form id="gameSearch">
-            <label class="gameLabel">Game you just finished: </label>
-            <input type="text" placeholder="e.g. Call of Duty" required class="gameInput">
-            <label class="numLabel">Number of new suggestions: </label>
-            <input type="number" class="numberInput" value="1" required max="25" class="resultNum">
-            <button type="submit" class="searchButton">Search</button>
-        </form>
+        <div class="landingContent">
+
+            <div class="landingHeader"><h1 class="landingScreenTitle" id="top">What to Play Next?<i class="fas fa-gamepad"></i></h1></div>
+            
+            <form id="gameSearch">
+                
+                <input type="text" placeholder="Previous Game Played" required class="gameInput">
+                <label class="numLabel"></label>
+                <input type="number" class="numberInput" value="5" required max="25" class="resultNum" min="1">
+                <button type="submit" class="searchButton"><i class="fa fa-search" ></i></button>
+            </form>
+        </div>
 
         <main role="main">
             <div class="results"></div>
+            
         </main>
 
+        <footer>
+            <div class="footer"><p class="footerText">This program utilizes the RAWG video game database API</p></div>
+        </footer>
 
     </body>
 
