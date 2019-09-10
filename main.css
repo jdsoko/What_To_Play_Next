@@ -36,7 +36,7 @@ input{
 }
 
 .fa-gamepad{
-    font-size:16pt;
+    font-size:17pt;
     padding-left: 10px;
     color: rgb(22, 22, 77);
    
@@ -44,7 +44,7 @@ input{
 
 .fa-search{
     color: rgb(255, 255, 255);
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .fa-search:active{
@@ -54,7 +54,7 @@ input{
 .searchButton{
     border-radius: 10px;
     margin-left: 2px;
-    height: 28px;
+    height: 30px;
     background-color:rgb(22, 22, 77);
     border: none;
     
@@ -84,7 +84,7 @@ input{
     background-color: rgb(22, 22, 77);
     width: 100%;
     position: fixed;
-    margin-left: -10px;
+    margin-left: -7.75px;
 }
 
 .footerText{
@@ -159,14 +159,14 @@ input{
 
     .searchButtonSmall{
         border-radius: 4px; 
-        height: 20px;
+        height: 23px;
         background-color:rgb(22, 22, 77);
         border: none;
         margin-left: 2px;
     }
 
     #searchIconSmall{
-        font-size: 11px;
+        font-size: 13px;
         margin-bottom: 2px;
     }
 
@@ -187,8 +187,8 @@ input{
     .moreInfo{
         font-family: 'Press Start 2P', cursive;
         border-radius: 10px;
-        font-size: 7pt;
-        height: 24px;
+        font-size: 9pt;
+        height: 28px;
         background-color:rgb(22, 22, 77);
         border: none;
         color: white;
@@ -200,8 +200,8 @@ input{
     .moreResults{
         font-family: 'Press Start 2P', cursive;
         border-radius: 10px;
-        font-size: 8pt;
-        height: 28px;
+        font-size: 11pt;
+        height: 32px;
         background-color:rgb(22, 22, 77);
         border: none;
         color: white;
@@ -217,8 +217,8 @@ input{
     .backButton{
         font-family: 'Press Start 2P', cursive;
         border-radius: 10px;
-        font-size: 7pt;
-        height: 24px;
+        font-size: 9pt;
+        height: 27px;
         background-color:rgb(22, 22, 77);
         border: none;
         color: white;
@@ -280,8 +280,8 @@ input{
     .moreGameButton{
         font-family: 'Press Start 2P', cursive;
         border-radius: 10px;
-        font-size: 7pt;
-        height: 25px;
+        font-size: 9pt;
+        height: 27px;
         background-color:rgb(22, 22, 77);
         border: none;
         color: white;
@@ -290,8 +290,8 @@ input{
 
     .moreGameNum{
         padding-left: 9px;
-        font-size: 8pt;
-        width: 25px;
+        font-size: 9pt;
+        width: 27px;
     }
 
     .gameInfo{
@@ -319,6 +319,7 @@ input{
     .storeLinks{
         margin-right: 30px;
         text-align: left;
+        
     }
 
     .storeList{
@@ -330,13 +331,14 @@ input{
     .link{
         display:inline;
         margin-right: 8px;
+        
     }
 
     .fa-steam, .fa-xbox, .fa-google-play, .fa-playstation, .fa-xbox{
-        font-size: 28px;
+        font-size: 32px;
     }
     .fa-apple{
-        font-size: 32px;
+        font-size: 36px;
     }
 
     .meta{
@@ -353,11 +355,23 @@ input{
     }
 
     .nintendo2{
-        font-size: 14px;
+        font-size: 16px;
         color: white;
         font-family: sans-serif;
         background-color: red; 
         border: 1px solid white;
         border-radius: 60px;
-        padding:2px;
+        padding:3px;
     }
+
+
+    @media screen and (min-width: 600px){
+        .gameInfo{
+            text-align: center;
+        }
+        .storeLinks{
+            text-align: center;
+        }
+    }
+
+    
