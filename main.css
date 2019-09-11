@@ -42,9 +42,9 @@ input{
    
 }
 
-.fa-search{
+.fa.fa-search{
     color: rgb(255, 255, 255);
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .fa-search:active{
@@ -57,7 +57,7 @@ input{
     height: 30px;
     background-color:rgb(22, 22, 77);
     border: none;
-    
+    width: 40px;
 }
 
 #gameSearch{
@@ -67,15 +67,16 @@ input{
 }
 
 .gameInput{
-    width: 175px;
-    font-size: 9pt;
+    width: 195px;
+    font-size: 10pt;
     margin-right: 5px;
     padding-left: 3px;
 }
 
 .numberInput{
-    font-size: 9pt;
+    font-size: 10pt;
    text-align: center;
+   width: 35px;
 }
 
 .footer{
@@ -84,7 +85,7 @@ input{
     background-color: rgb(22, 22, 77);
     width: 100%;
     position: fixed;
-    margin-left: -7.75px;
+    margin-left: -8px;
 }
 
 .footerText{
@@ -95,7 +96,7 @@ input{
 }
 
 .resultImg{
-    width: 210px;
+    width: 220px;
      border-radius: 4px;
     border: 2px solid rgb(22, 22, 77);
     margin-left: -5px;
@@ -106,14 +107,14 @@ input{
     /*
     border-left: 2px solid rgb(22, 22, 77);
     border-right: 2px solid rgb(22, 22, 77);
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-right: 8px;
+    margin-left: 8px;
     */
   }
   
   .searchResult{
     border-bottom: 2px solid rgb(22, 22, 77);
-    width: 60%;
+    width: 85%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
@@ -145,7 +146,7 @@ input{
     }
 
     .gameInputSmall{
-        font-size: 7pt;
+        font-size: 9pt;
         width: 155px;
         margin-right: 5px;
         padding-left: 3px;
@@ -153,21 +154,23 @@ input{
 
     .numberInputSmall{
         text-align: center;
-        font-size: 7pt; 
-        width: 20px;
+        font-size: 9pt; 
+        width: 28px;
     }
 
     .searchButtonSmall{
-        border-radius: 4px; 
-        height: 23px;
+        margin-top: 1px;
+        border-radius: 6px; 
+        
         background-color:rgb(22, 22, 77);
         border: none;
         margin-left: 2px;
+        
     }
 
-    #searchIconSmall{
-        font-size: 13px;
-        margin-bottom: 2px;
+    .fa.fa-search#searchIconSmall{
+        font-size: 14px;
+        padding: 1px;
     }
 
     .gameName{
@@ -175,12 +178,12 @@ input{
         font-weight: bold;
         letter-spacing: 0.5px;
         line-height: 1.5;
-        font-size: 11px;
+        font-size: 13px;
         color: rgb(22, 22, 77);
     }
 
     p.genres{
-        font-size: 11px;
+        font-size: 12px;
         font-weight: bold;
     }
 
@@ -206,6 +209,7 @@ input{
         border: none;
         color: white;
         
+        
     }
 
     button:active{
@@ -214,11 +218,16 @@ input{
         border: 1px solid rgb(22, 22, 77);
     }
 
+    button:hover{
+        cursor: pointer;
+        background-color:  rgb(33, 33, 190);
+    }
+
     .backButton{
         font-family: 'Press Start 2P', cursive;
         border-radius: 10px;
-        font-size: 9pt;
-        height: 27px;
+        font-size: 12pt;
+        height: 29px;
         background-color:rgb(22, 22, 77);
         border: none;
         color: white;
@@ -250,8 +259,8 @@ input{
     .description{
         font-size: 8pt;
         text-align: left;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: 15px;
+        padding-bottom: 15px;
         padding-left: 10px;
         padding-right: 5px;
         margin-left: 25px;
@@ -268,6 +277,8 @@ input{
         font-size: 10pt;
         color: rgb(22, 22, 77);
     }
+
+    
 
     .likeGameLabel{
         font-family: 'Press Start 2P', cursive;
@@ -291,7 +302,7 @@ input{
     .moreGameNum{
         padding-left: 9px;
         font-size: 9pt;
-        width: 27px;
+        width: 29px;
     }
 
     .gameInfo{
@@ -314,6 +325,8 @@ input{
         color: black;
         font-size: 9pt;
         padding-bottom: 10px;
+        padding-top: 15px;
+        line-height: 1.7;
     }
 
     .storeLinks{
@@ -327,6 +340,7 @@ input{
         color: rgb(22, 22, 77);
         font-size: 9pt;
         text-align: left;
+        
     }
     .link{
         display:inline;
@@ -335,10 +349,10 @@ input{
     }
 
     .fa-steam, .fa-xbox, .fa-google-play, .fa-playstation, .fa-xbox{
-        font-size: 32px;
+        font-size: 36px;
     }
     .fa-apple{
-        font-size: 36px;
+        font-size: 40px;
     }
 
     .meta{
@@ -374,4 +388,321 @@ input{
         }
     }
 
+    @media screen and (min-width: 700px){
+        
+        .landingScreenTitle{
+            
+            margin-top: 250px;
+            font-size: 16pt;
+        }
+
+        .fa-gamepad{
+            font-size:24pt;
+            padding-left: 12px;
+        }
+
+        .fa.fa-search{
+            font-size: 22px;
+            
+        }
+
+        .searchButton{
+            height: 45px;
+            width: 55px;
+        }
+
+        .gameInput{
+            font-size: 16pt;
+            width: 350px;
+            padding-left: 5px;
+        }
+
+        .numberInput{
+            font-size: 16pt;
+            width: 55px;
+            padding: 3px;
+            padding-left: 4px;
+        }
+
+        .footer{
+            height: 45px;
+        }
+
+        .footerText{
+            font-size: 9pt;
+        }
+
+        .smaller{
+            font-size:13pt;
+        }
+        
+        #gamepadSmall{
+            font-size: 21pt;
+        }
+        
+        .numberInputSmall.numberInput{
+            font-size: 11pt;
+            width:40px;
+            padding-left: 5px;
+        }
+
+        .gameInputSmall.gameInput{
+            font-size:11pt;
+            width: 250px;
+            padding-left: 3px;
+            
+        }
+
+        .fa.fa-search#searchIconSmall{
+            font-size: 18pt;
+        }
+
+        .searchButtonSmall{
+            height: 35px;
+            width: 45px;
+        }
+
+        .resultImg{
+            width: 300px;
+        }
+
+        .gameName{
+            font-size: 13pt;
+        }
+
+        p.genres{
+            font-size: 12pt;
+        }
+
+        .moreInfo{
+            font-size: 11pt;
+            height:38px;
+        }
+
+        .moreResults{
+            font-size: 14pt;
+            height: 40px;
+        }
+
+        .backButton{
+            
+            margin-top: 15px;
+            font-size: 14pt;
+            height:42px;
+        }
+
+        .gameInfoName{
+            font-size: 17pt;
+        }
+
+        .infoPic{
+            width: 380px;
+        }
+
+        .descriptionHead{
+            font-size: 14pt;
+        }
+
+        .description{
+            width: 75%;
+            margin-bottom: 40px;
+            font-size: 11pt;
+            text-align: left;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: bold;
+            padding-top: 22px;
+            padding-bottom: 22px;
+        }
+
+        .gameInfo li{
+            margin-bottom: 15px;
+        }
+
+        .infoListItem{
+            font-size: 13pt;
+        }
+
+        .listAPI{
+            font-size: 13pt;
+        }
+
+        .meta{
+            font-size: 16pt;
+        }
+
+        .storeList{
+            padding-top: 35px;
+            padding-bottom: 20px;
+            font-size:12pt;
+        }
+
+        .fa-steam, .fa-xbox, .fa-google-play, .fa-playstation, .fa-xbox{
+            font-size: 50px;
+        }
+        .fa-apple{
+            font-size: 56px;
+        }
+
+        .storeLinks li{
+            padding-right: 12px;
+        }
+
+        .gameVid{
+            margin-top: 50px;
+            width: 500px;
+            height: 375px;
+            margin-bottom: 35px;
+        }
     
+
+        .nintendo2{
+        font-size: 24px;
+        }
+
+        .likeGameLabel{
+            font-size: 13pt;
+            margin-bottom: 15px;
+        }
+
+        .moreGameNum{
+            
+            width: 36px;
+            font-size: 14pt;
+        }
+
+        .moreGameButton{
+            margin-top: 20px;
+            font-size: 15pt;
+            height: 36px;
+        }
+    }
+
+    @media screen and (min-width: 1050px){
+        .landingScreenTitle{
+            
+            margin-top: 275px;
+            font-size: 22pt;
+        }
+
+        .fa-gamepad{
+            font-size:34pt;
+            padding-left: 14px;
+        }
+
+        .fa.fa-search{
+            font-size: 24px;
+            
+        }
+
+        .searchButton{
+            height: 50px;
+            width: 60px;
+        }
+
+        .gameInput{
+            font-size: 17pt;
+            width: 440px;
+            padding-left: 10px;
+        }
+
+        .numberInput{
+            font-size: 17pt;
+            width: 60px;
+            padding: 3px;
+            padding-left: 4px;
+        }
+
+
+        .smaller{
+            font-size:14pt;
+        }
+        
+        #gamepadSmall{
+            font-size: 26pt;
+        }
+        
+        .numberInputSmall.numberInput{
+            font-size: 12pt;
+            width:44px;
+            padding-left: 5px;
+        }
+
+        .gameInputSmall.gameInput{
+            font-size:12pt;
+            width: 275px;
+            padding-left: 3px;
+            
+        }
+
+        .fa.fa-search#searchIconSmall{
+            font-size: 18pt;
+        }
+
+        .searchButtonSmall{
+            height: 35px;
+            width: 45px;
+        }
+
+        .resultImg{
+            width: 400px;
+            
+           
+        }
+        
+        .searchResult{
+            width: 40%;
+        }
+
+        .gameName{
+            
+            font-size: 14pt;
+            
+        }
+
+        p.genres{
+            font-size: 13pt;
+            
+        }
+
+        .moreInfo{
+            
+            font-size: 12pt;
+            height:42px;
+        }
+
+        
+        .moreResults{
+            margin-top: 100px;
+            font-size: 15pt;
+            height: 43px;
+            
+
+        }
+
+        .infoPic{
+            width: 410px;
+        }
+
+        .description{
+            font-size: 12pt;
+            width: 50%;
+        }
+
+        .moreGameNum{
+            width: 45px;
+        }
+
+        .gameInfoName{
+            font-size: 20pt;
+        }
+
+        .descriptionHead{
+            font-size: 16pt;
+        }
+
+        .backButton{
+            font-size: 16pt;
+            height: 45px;
+        }
+    }

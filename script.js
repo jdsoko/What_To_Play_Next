@@ -12,6 +12,7 @@ let shouldScroll = true;
 function formSubmit(){
     $(document).on('submit', function(event){
         event.preventDefault();
+        $('input').blur();
         let gameTitle = parseTitle($('.gameInput').val());
         let resultNum = $('.numberInput').val()
         interpretTitle(gameTitle, resultNum);
@@ -70,7 +71,7 @@ function getInfo(input1, input2){
         <input type="text" placeholder="Previous Game Played" required class="gameInputSmall gameInput" >
         <label class="numLabel"></label>
         <input type="number" class="numberInputSmall numberInput" value="5" required max="25" class="resultNum" min="1" >
-        <button type="submit" class="searchButtonSmall" style="border-radius: 4px; height: 20px;"><i class="fa fa-search" id="searchIconSmall"></i></button>
+        <button type="submit" class="searchButtonSmall"><i class="fa fa-search" id="searchIconSmall"></i></button>
     </form>
 </div>`)
     for(let i = 0; i < input.results.length; i++){
@@ -88,7 +89,7 @@ function getInfo(input1, input2){
         <button type="submit" class="moreInfo" id="${input.results[i].slug}">More Info</button>
         </div>`)
     }
-        $('.results').append(`<button class="moreResults">More Results</button>`)
+        $('.results').append(`<br><button class="moreResults">More Results</button>`)
     $('#gameSearch').trigger('reset');
         $('.results').append(`<div class="space"></div><div class="space"></div>`)
     if (shouldScroll === true){
@@ -122,7 +123,7 @@ function getInfo(input1, input2){
     $('.results').empty();
    
      
-     $('.results').html(`<button class="backButton">Back to Results</button>
+     $('.results').html(`<button class="backButton">Back</button>
      <h1 class="gameInfoName">${readInfo(input1.name)}</h1>
      <div class="gameMoreInfo">
     <img src="${readImage(input1.background_image)}" class="infoPic">
@@ -136,7 +137,7 @@ function getInfo(input1, input2){
    </ul>
    </div>
    <div class="storeLinks">
-   <ul><span class="storeList">Purchase: </span><br>${generateStoreLinks(input1).join(' ')}
+   <ul><span class="storeList">Purchase: </span><br>${generateStoreLinks(input1)}
    </div>
    </ul>
 <iframe class="gameVid" 
@@ -160,20 +161,22 @@ document.getElementById("top").scrollIntoView();;
  ///Genrates Metacritc score result
  function metaScore(input){
     let score = input;
+    let finalHtml = ''
     if (score === null) {
-        return '<li  class="infoListItem">Meta Score: <span class="listAPI">N/A</span></li>'}
+        finalHtml = '<li  class="infoListItem">Meta Score: <span class="listAPI">N/A</span></li>'}
     else if (score <= 49){
-        return `<li class="infoListItem">Meta Score: <span class="meta"  style="background-color: rgb(255,0,0); color: rgb(255,255,255);">${score}</span></li>`
+        finalHtml = `<li class="infoListItem">Meta Score: <span class="meta"  style="background-color: rgb(255,0,0); color: rgb(255,255,255);">${score}</span></li>`
     }
     else if (score >= 50 && score <= 74){
-        return `<li class="infoListItem">Meta Score: <span class="meta" style="background-color: rgb(255,204,51); color: rgb(255,255,255);">${score}</span></li>`
+        finalHtml = `<li class="infoListItem">Meta Score: <span class="meta" style="background-color: rgb(255,204,51); color: rgb(255,255,255);">${score}</span></li>`
     }
     else if(score > 75){
-        return `<li class="infoListItem">Meta Score: <span class="meta" style="background-color: rgb(102,204,51); color: rgb(255,255,255);">${score}</span></li>`
+        finalHtml = `<li class="infoListItem">Meta Score: <span class="meta" style="background-color: rgb(102,204,51); color: rgb(255,255,255);">${score}</span></li>`
     }
     else {
         console.log(score);
     }
+    return finalHtml;
  }
 
 ///API Description
@@ -209,6 +212,7 @@ function readDescription(input){
  ///Store Links
  function generateStoreLinks(input){
     let storeLinks = [];
+    
     for(let i = 0; i < input.stores.length; i++){
         if (input.stores[i].store.slug === 'steam'){
             storeLinks.push(`<li class="link"><a href=${input.stores[i].url} target="_blank"><i class='fab fa-steam' style='color: rgb(39,64,85);'></i></a></li>`);
@@ -235,10 +239,15 @@ function readDescription(input){
             console.log('no store');
         }
 
-        
+    }
+ if (storeLinks.length === 0){
+     return`<li class="listAPI">***No links available. Try buying it on disc.***</li>`;
  }
- return storeLinks;}
+ else{
+    return storeLinks.join(' ');
+ }}
 
+ 
  ///Back Button Event Listener
  function backButton(){
     $('.results').on('click', '.backButton',function(event){
@@ -270,7 +279,7 @@ function readDescription(input){
  ///Generates Trailer Link
  function generateTrailerLink(input1, input2){ 
     console.log(input1);
-    let link = `https://www.youtube.com/embed/${input1.items[0].id.videoId}`
+    let link = `https://www.youtube.com/embed/${input1.items[0].id.videoId}` 
 
     generateMoreInfo(input2, link);
  }
