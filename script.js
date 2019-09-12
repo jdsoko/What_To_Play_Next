@@ -1,6 +1,5 @@
 'use strict'
 
-
 ///Global Game Title Search Variable
 let titleOfGame = "";
 ///Global Variable for Number of Search Results
@@ -95,13 +94,9 @@ function getInfo(input1, input2){
     if (shouldScroll === true){
         document.getElementById("top").scrollIntoView();;
     }
-
-    
-    
- }
+}
 
  
-
  ///More Info Button Clicked
  function moreInfo(){
     $('.results').on('click', '.moreInfo', function(event){
@@ -113,8 +108,7 @@ function getInfo(input1, input2){
         .then(responseJson => getTrailer(responseJson, responseJson.name));
 
     }) 
-
- }
+}
 
 
 ///Generate Results from 'More Info'
@@ -179,6 +173,7 @@ document.getElementById("top").scrollIntoView();;
     return finalHtml;
  }
 
+
 ///API Description
 function readDescription(input){
     if(input === ''){
@@ -240,12 +235,13 @@ function readDescription(input){
         }
 
     }
- if (storeLinks.length === 0){
-     return`<li class="listAPI">***No links available. Try buying it on disc.***</li>`;
- }
- else{
-    return storeLinks.join(' ');
- }}
+    if (storeLinks.length === 0){
+        return`<li class="listAPI">***No links available. Try buying it on disc.***</li>`;
+    }
+
+    else{
+        return storeLinks.join(' ');
+    }}
 
  
  ///Back Button Event Listener

@@ -16,6 +16,10 @@ a{
     text-decoration: none;
 }
 
+
+    /* Landing Screen Styling */
+
+
 .landingHeader{
     display: flex;
     justify-content: space-around;
@@ -95,6 +99,8 @@ input{
     text-align: center;
 }
 
+    /* Results Page Stylings */
+
 .resultImg{
     width: 220px;
      border-radius: 4px;
@@ -104,12 +110,6 @@ input{
   
   .results{
     text-align: center;
-    /*
-    border-left: 2px solid rgb(22, 22, 77);
-    border-right: 2px solid rgb(22, 22, 77);
-    margin-right: 8px;
-    margin-left: 8px;
-    */
   }
   
   .searchResult{
@@ -222,6 +222,8 @@ input{
         cursor: pointer;
         background-color:  rgb(33, 33, 190);
     }
+
+    /* More Info Screen Stylings */
 
     .backButton{
         font-family: 'Press Start 2P', cursive;
@@ -387,6 +389,8 @@ input{
             text-align: center;
         }
     }
+
+    /* Media Query for Tablets */
 
     @media screen and (min-width: 700px){
         
@@ -578,6 +582,8 @@ input{
         }
     }
 
+    /* Media Query for Computer Screens */
+    
     @media screen and (min-width: 1050px){
         .landingScreenTitle{
             
