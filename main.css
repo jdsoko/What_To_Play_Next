@@ -334,7 +334,7 @@ input{
     .storeLinks{
         margin-right: 30px;
         text-align: left;
-        
+        display: block;
     }
 
     .storeList{
@@ -342,6 +342,7 @@ input{
         color: rgb(22, 22, 77);
         font-size: 9pt;
         text-align: left;
+         
         
     }
     .link{
@@ -386,6 +387,9 @@ input{
             text-align: center;
         }
         .storeLinks{
+            text-align: center;
+        }
+        .storeList{
             text-align: center;
         }
     }
@@ -539,6 +543,7 @@ input{
             padding-top: 35px;
             padding-bottom: 20px;
             font-size:12pt;
+            text-align: center;
         }
 
         .fa-steam, .fa-xbox, .fa-google-play, .fa-playstation, .fa-xbox{
@@ -657,7 +662,7 @@ input{
         }
         
         .searchResult{
-            width: 40%;
+            width: 65%;
         }
 
         .gameName{

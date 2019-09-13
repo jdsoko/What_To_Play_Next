@@ -60,7 +60,7 @@ function getInfo(input1, input2){
 
 ///Adds the results from the search to the DOM
  function generateResults(input){
-     console.log(input);
+    //(input);
      $('.landingContent').empty();
     $('.results').empty();
     $('.landingContent').html(`<div class="landingHeader" id="top"><h1 class="smaller">What to Play Next?<i class="fas fa-gamepad" id="gamepadSmall"></i></h1></div>
@@ -69,10 +69,9 @@ function getInfo(input1, input2){
         
         <input type="text" placeholder="Previous Game Played" required class="gameInputSmall gameInput" >
         <label class="numLabel"></label>
-        <input type="number" class="numberInputSmall numberInput" value="5" required max="25" class="resultNum" min="1" >
+        <input type="number" class="numberInputSmall numberInput resultNum" value="5" required max="25" min="1" >
         <button type="submit" class="searchButtonSmall"><i class="fa fa-search" id="searchIconSmall"></i></button>
-    </form>
-</div>`)
+    </form>`)
     for(let i = 0; i < input.results.length; i++){
         let genres = "";
     if(input.results[i].genres.length > 0){
@@ -82,7 +81,7 @@ function getInfo(input1, input2){
     else{
         genres = "(No genres availaible)"
     }
-        $('.results').append(`<div class="searchResult"><div id="${input.results.length}" ><img class="resultImg" src="${input.results[i].background_image}">
+        $('.results').append(`<div class="searchResult"><div id="${input.results.length}" ><img class="resultImg" src="${input.results[i].background_image}" alt="An image representing the game ${input.results[i].name}">
         <p class="gameName" >${input.results[i].name}</p>
          <p class="genres">${genres}</p></div>
         <button type="submit" class="moreInfo" id="${input.results[i].slug}">More Info</button>
@@ -113,27 +112,29 @@ function getInfo(input1, input2){
 
 ///Generate Results from 'More Info'
  function generateMoreInfo(input1, input2){
-    console.log(input1);
+   //(input1);
     $('.results').empty();
    
      
      $('.results').html(`<button class="backButton">Back</button>
      <h1 class="gameInfoName">${readInfo(input1.name)}</h1>
      <div class="gameMoreInfo">
-    <img src="${readImage(input1.background_image)}" class="infoPic">
+    <img src="${readImage(input1.background_image)}" class="infoPic" alt="An image of the game ${input1.name}">
     <h2 class="descriptionHead">Description:</h2>
     <p class="description">${readDescription(input1.description_raw)}</p>
     
    <ul class="gameInfo">
     <li class="infoListItem">Rating: <span class="listAPI">${readESRB(input1.esrb_rating)}</span></li>
-     ${metaScore(input1.metacritic)}
+    ${metaScore(input1.metacritic)}
     <li class="infoListItem">Release Date: <span class="listAPI">${readInfo(input1.released)}</span></li>
    </ul>
    </div>
    <div class="storeLinks">
-   <ul><span class="storeList">Purchase: </span><br>${generateStoreLinks(input1)}
-   </div>
+   <h2 class="storeList">Purchase:</h2>
+   <ul>${generateStoreLinks(input1)}
    </ul>
+   </div>
+   
 <iframe class="gameVid" 
 src=${input2}>
 </iframe>
@@ -168,7 +169,7 @@ document.getElementById("top").scrollIntoView();;
         finalHtml = `<li class="infoListItem">Meta Score: <span class="meta" style="background-color: rgb(102,204,51); color: rgb(255,255,255);">${score}</span></li>`
     }
     else {
-        console.log(score);
+       //(score);
     }
     return finalHtml;
  }
@@ -207,7 +208,7 @@ function readDescription(input){
  ///Store Links
  function generateStoreLinks(input){
     let storeLinks = [];
-    
+    let gog = '';
     for(let i = 0; i < input.stores.length; i++){
         if (input.stores[i].store.slug === 'steam'){
             storeLinks.push(`<li class="link"><a href=${input.stores[i].url} target="_blank"><i class='fab fa-steam' style='color: rgb(39,64,85);'></i></a></li>`);
@@ -227,12 +228,15 @@ function readDescription(input){
         else if (input.stores[i].store.slug === 'apple-appstore'){
             storeLinks.push(`<li class="link"><a href=${input.stores[i].url} target="_blank"><i class='fab fa-apple' style='color: rgb(68,68,68);'></i></a></li>`);
         }
-        else if (input.stores[i].store.slug === 'xbox-store'){
+
+        else if(input.stores[i].store.slug === 'gog'){
+            gog = "Gog is not a trustworth site.";
+        }
+
+        else {
             storeLinks.push(`<li class="link"><a href=${input.stores[i].url} target="_blank"><i class='fab fa-xbox' style='color: rgb(255,255,255); background-color: rgb(16,121,16)'></i></a></li>`);
         }
-        else{
-            console.log('no store');
-        }
+        
 
     }
     if (storeLinks.length === 0){
@@ -266,7 +270,7 @@ function readDescription(input){
 
  ///Youtube GET request
  function getTrailer(input1, input2){
-    console.log(input2); 
+   
     fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${input2.split(' ').join('%20')}%20original%20game%20trailer&topicId=%2Fm%2F0bzvm2&type=video&key=AIzaSyBOy_1MABfgfN5f4fcpj88B8ktpq1TY3e4`)
      .then(response => response.json())
      .then(responseJson => generateTrailerLink(responseJson, input1));
@@ -274,7 +278,7 @@ function readDescription(input){
 
  ///Generates Trailer Link
  function generateTrailerLink(input1, input2){ 
-    console.log(input1);
+   
     let link = `https://www.youtube.com/embed/${input1.items[0].id.videoId}` 
 
     generateMoreInfo(input2, link);
