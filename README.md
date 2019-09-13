@@ -6,10 +6,13 @@
 
 ## Screenshots: 
 
+### Landing Screen
 ![Screen shot of landing screen](https://i.ibb.co/RSLgJM3/pasted-image-0.png)
 
+### Results Screen
 ![Screen shot of search screen](https://i.ibb.co/qpmsT2r/what-to-play-screenshot.png)
 
+### More Info Screen
 ![Screen shot of more info screen](https://i.ibb.co/fFJDPsW/pasted-image-0-1.png)
 
 
