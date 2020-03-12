@@ -271,7 +271,7 @@ function readDescription(input){
  ///Youtube GET request
  function getTrailer(input1, input2){
    
-    fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${input2.split(' ').join('%20')}%20original%20game%20trailer&topicId=%2Fm%2F0bzvm2&type=video&key=AIzaSyD5iTYMWgLIXSY4MinnQchxWkeFSIx4g4Y`)
+    fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${input2.split(' ').join('%20')}%20original%20game%20trailer&topicId=%2Fm%2F0bzvm2&type=video&key=AIzaSyAfWO3pl6DFPptHAwg4vxrEGb5dlouBvts`)
      .then(response => response.json())
      .then(responseJson => generateTrailerLink(responseJson, input1));
  }
