@@ -1,4 +1,4 @@
-# **What to Play Next**
+# What to Play Next
 
 #### Live App: https://jdsoko.github.io/What_To_Play_Next/
 
